@@ -89,11 +89,20 @@ class VAE():
         self.generator = Model(decoder_layers[0], decoder_layers[-1])            
             
 
-    def recognize(self, x_train, batch_size=100, epochs=50, verbose=True):
-        self.vae.fit(x_train, epochs=epochs, batch_size=batch_size, verbose = verbose)
+    def recognize(self, X, batch_size=100, epochs=50, verbose=True):
+        '''
+        fit the vae model with X.
+        '''
+        self.vae.fit(X, epochs=epochs, batch_size=batch_size, verbose = verbose)
        
-    def predict(self, x_test, batch_size=100):
-        return self.encoder.predict(x_test, batch_size=batch_size)
+    def predict(self, X, batch_size=100):
+        '''
+        project input onto latent space with the encoder layers.
+        '''
+        return self.encoder.predict(X, batch_size=batch_size)
 
-    def generate(self, sample):
-        return self.generator.predict(sample)
+    def generate(self, latent):
+        '''
+        generate new datas from the decoder layers.
+        '''
+        return self.generator.predict(latent)
