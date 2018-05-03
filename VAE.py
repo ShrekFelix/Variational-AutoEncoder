@@ -13,19 +13,19 @@ class VAE():
     Returns a compiled VAE model that looks like this:
     
     output            ooooooooooooooooooooooooo
-                         XXXXXXXXXXXXXXXXXXXX
+                         XXXXXXXXXXXXXXXXXXXX    -Dense
                          oooooooooooooooooooo
-    decoder               **hidden layers**
+    decoder               **hidden layers**      -Dense
                           ooooooooooooooooo
-                                XXXXXX
+                                XXXXXX           -Dense
     z                          oooooooo
-                               XXX  XXX 
+                               XXX  XXX          -Lambda: sample
     z_mean,z_log_var      oooooooo  oooooooo  
-                           XXXXXX    XXXXXX
+                           XXXXXX    XXXXXX      -Dense
                           ooooooooooooooooo
-    encoder               **hidden layers**
+    encoder               **hidden layers**      -Dense
                         oooooooooooooooooooo
-                        XXXXXXXXXXXXXXXXXXXX
+                        XXXXXXXXXXXXXXXXXXXX     -Dense
     input             ooooooooooooooooooooooooo
     
     ----------------------------------------------------------------------------------
