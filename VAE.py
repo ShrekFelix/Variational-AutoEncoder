@@ -40,7 +40,7 @@ class VAE():
     - optimizer:(default 'rmsprop')
         Gradient descent method used in back-propagation.
     - verbose:(default True)
-        Will print model summary is set to True.
+        Will print model summary if set to True.
     '''    
     
     def __init__(self, layer_sizes, decoder_activation='sigmoid', optimizer='rmsprop',verbose=True):
