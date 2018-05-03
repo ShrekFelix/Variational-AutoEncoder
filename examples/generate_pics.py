@@ -1,5 +1,6 @@
 '''
-This example demonstrates how to generate new figures from the decoder of a trained VAE, making use of VAE.generate() method. First sample from Gaussian distribution and feed the decoder, it will produce the 784D figure with variation.
+This example demonstrates how to generate new figures from the decoder of a trained VAE, making use of VAE.generate() method. 
+First sample from Gaussian distribution and feed the decoder, it will produce the 784D figure with variation.
 '''
 
 

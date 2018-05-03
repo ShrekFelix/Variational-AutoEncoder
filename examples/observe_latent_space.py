@@ -1,6 +1,7 @@
 '''
 This example demonstrates using VAE.predict() method to project input onto latent space given a trained VAE encoder network.
-The VAE is trained with latent dimension equal to 2 so that it could be shown with a 2D picture. The more separate the clusters, the better the VAE recognize the test data. 
+The VAE is trained with latent dimension equal to 2 so that it could be shown with a 2D picture. 
+The more separate the clusters, the better the VAE recognize the test data. 
 
 '''
 
